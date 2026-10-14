@@ -1,0 +1,104 @@
+{
+  "source": "github",
+  "repository": "https://github.com/praneethkumar9945-glitch/run-it-easy-de568fe5",
+  "capabilities": [
+    {
+      "capability": "code",
+      "source": "GitHub repository application",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "Recreate the repository application in this TanStack project, including its profile and post, reel, and story creation flows."
+    },
+    {
+      "capability": "schema",
+      "source": "drizzle/migrations SQL: profiles, user_roles, community_content, and storage policies",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "Recreate the required Lovable Cloud schema and access policies after reviewing the original migration and schema guidance."
+    },
+    {
+      "capability": "records",
+      "source": "Original application's connected data store; no record export is attached",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "After the preview, request sanitized CSV or JSON exports of application records; import them after filtering credentials."
+    },
+    {
+      "capability": "auth identities",
+      "source": "Original application's authentication provider; no user export is attached",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "After the preview, request the provider's user export containing original IDs, email addresses, profiles, roles, and memberships; verify first-login setup."
+    },
+    {
+      "capability": "authorization",
+      "source": "Original application RLS policies and account roles",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "Recreate and verify user-scoped content access and role restrictions in Lovable Cloud."
+    },
+    {
+      "capability": "uploaded file bytes",
+      "source": "No media file export is attached; repository asset files are pointer manifests",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "Request original uploaded media files after the preview; keep media import pending until supplied and verified."
+    },
+    {
+      "capability": "external providers",
+      "source": "Repository package/configuration and inspected call sites",
+      "outcome": "preserve if present",
+      "status": "pending",
+      "next_action": "Finish call-site inspection and retain compatible production providers; replace only the source account/database provider with Lovable Cloud."
+    },
+    {
+      "capability": "public endpoints",
+      "source": "Repository routes and server code",
+      "outcome": "preserve if present",
+      "status": "pending",
+      "next_action": "Complete endpoint inspection and preserve external callers for any detected public routes."
+    },
+    {
+      "capability": "callbacks",
+      "source": "Repository routes and provider configuration",
+      "outcome": "preserve if present",
+      "status": "pending",
+      "next_action": "Complete callback inspection and preserve non-auth callbacks; update account-provider callbacks as required by Lovable Cloud."
+    },
+    {
+      "capability": "webhooks",
+      "source": "Repository server/API routes and provider integrations",
+      "outcome": "preserve if present",
+      "status": "pending",
+      "next_action": "Complete webhook inspection and preserve provider callers and verification behavior if detected."
+    },
+    {
+      "capability": "schedules",
+      "source": "Repository server code and configuration",
+      "outcome": "preserve if present",
+      "status": "pending",
+      "next_action": "Complete schedule inspection and preserve detected scheduled behavior."
+    },
+    {
+      "capability": "secrets",
+      "source": "Repository environment-variable names; secret values were excluded",
+      "outcome": "preserve required user-owned services only",
+      "status": "pending",
+      "next_action": "Finish provider call-site review; request only credentials required to verify a retained provider, through the secure form."
+    },
+    {
+      "capability": "cutover",
+      "source": "Original repository application and connected data provider",
+      "outcome": "pending user action",
+      "status": "pending",
+      "next_action": "Record the production URL and provider cutover steps after the preview and data import."
+    },
+    {
+      "capability": "verification",
+      "source": "Migrated app, Lovable Cloud, imported data, and user identity flow",
+      "outcome": "verify",
+      "status": "pending",
+      "next_action": "Verify the build, representative routes, auth, media creation/storage, and a create/read/update/delete flow after required exports are available."
+    }
+  ]
+}
